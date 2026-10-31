@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional portfolio of Suriya V, PGDM student with experience in business development, lead generation and audit support.">
+<title>Suriya V | Professional Portfolio</title>
+<style>
+:root{
+  --navy:#102746; --navy2:#173b65; --blue:#2d659b; --ink:#17263b;
+  --muted:#627187; --pale:#eef3f8; --line:#dce4ed; --white:#fff;
+  --accent:#9fc3e6; --shadow:0 16px 42px rgba(16,39,70,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:#f7f9fc;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:1.05rem;font-weight:800;letter-spacing:.04em;color:var(--navy)}
+.brand span{color:var(--blue)}
+nav{display:flex;gap:25px;align-items:center}
+nav a{font-size:.88rem;font-weight:650;color:#4b5d73}
+nav a:hover{color:var(--blue)}
+.menu-btn{display:none;border:1px solid var(--line);background:white;border-radius:8px;padding:8px 11px;color:var(--navy);font-weight:700}
+.hero{background:linear-gradient(118deg,var(--navy),#173e68 68%,#245987);color:white;padding:94px 0 88px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-130px;top:-210px;box-shadow:0 0 0 55px rgba(255,255,255,.035),0 0 0 110px rgba(255,255,255,.025)}
+.hero-content{position:relative;z-index:1;max-width:760px}
+.eyebrow{font-size:.78rem;letter-spacing:.19em;text-transform:uppercase;color:#b9d4ed;font-weight:750}
+h1{font-size:clamp(2.8rem,7vw,5.2rem);line-height:1.06;letter-spacing:-.045em;margin:16px 0 18px}
+.hero p{font-size:1.13rem;color:#e0eaf4;max-width:680px;margin:0 0 28px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 32px}
+.tag{border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:7px 13px;font-size:.82rem;color:#f0f6fc;background:rgba(255,255,255,.07)}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:8px;font-weight:750;font-size:.91rem;transition:.2s}
+.btn-primary{background:white;color:var(--navy)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.16)}
+.btn-outline{border:1px solid rgba(255,255,255,.5);color:white}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
+section{padding:78px 0}
+.section-head{margin-bottom:32px}
+.kicker{color:var(--blue);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+h2{color:var(--navy);font-size:clamp(1.8rem,4vw,2.55rem);letter-spacing:-.03em;margin:7px 0 9px;line-height:1.2}
+.section-intro{color:var(--muted);max-width:690px;margin:0}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:stretch}
+.panel{background:white;border:1px solid var(--line);border-radius:15px;padding:28px;box-shadow:0 6px 24px rgba(20,43,72,.04)}
+.panel p{margin:0;color:#526278}
+.fact-list{display:grid;gap:17px}
+.fact{border-bottom:1px solid var(--line);padding-bottom:13px}
+.fact:last-child{border:0;padding:0}
+.fact small{display:block;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:750}
+.fact strong{color:var(--navy);font-size:.98rem}
+.timeline{display:grid;gap:18px}
+.experience{display:grid;grid-template-columns:170px 1fr;gap:24px;background:white;border:1px solid var(--line);border-radius:14px;padding:25px 27px;box-shadow:0 5px 22px rgba(20,43,72,.035)}
+.exp-date{font-size:.82rem;color:var(--blue);font-weight:800;letter-spacing:.04em}
+.exp-type{font-size:.78rem;color:var(--muted);margin-top:5px}
+.experience h3{margin:0;color:var(--navy);font-size:1.12rem}
+.role{color:var(--blue);font-weight:700;font-size:.9rem;margin:3px 0 10px}
+.experience ul{margin:0;padding-left:19px;color:#53647a}
+.experience li{padding:2px 0}
+.education-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.edu{background:white;border:1px solid var(--line);border-radius:13px;padding:23px}
+.edu .year{font-size:.78rem;color:var(--blue);font-weight:800;letter-spacing:.05em}
+.edu h3{color:var(--navy);font-size:1.03rem;margin:7px 0 3px}
+.edu p{margin:0;color:var(--muted);font-size:.9rem}
+.edu .score{display:inline-block;margin-top:13px;background:var(--pale);color:var(--navy);padding:5px 10px;border-radius:20px;font-size:.8rem;font-weight:750}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.skill-card{background:white;border:1px solid var(--line);border-radius:14px;padding:24px}
+.skill-card h3{margin:0 0 15px;color:var(--navy);font-size:1.04rem}
+.pills{display:flex;gap:9px;flex-wrap:wrap}
+.pill{background:var(--pale);color:#294967;border-radius:7px;padding:7px 11px;font-size:.84rem;font-weight:650}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cert{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--line);border-radius:11px;padding:16px}
+.cert-mark{width:30px;height:30px;border-radius:8px;background:#e8f0f8;color:var(--blue);display:grid;place-items:center;font-weight:900;flex:none}
+.cert strong{display:block;color:var(--navy);font-size:.91rem;line-height:1.4}
+.cert span{display:block;color:var(--muted);font-size:.82rem;margin-top:3px}
+.achievements{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.achievement{background:white;border:1px solid var(--line);border-radius:13px;padding:21px}
+.achievement h3{margin:0 0 7px;color:var(--navy);font-size:1rem}
+.achievement p{margin:0;color:var(--muted);font-size:.88rem}
+.contact{background:var(--navy);color:white;padding:65px 0}
+.contact h2{color:white}
+.contact .section-intro{color:#d3dfec}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.contact-links{display:grid;gap:13px}
+.contact-item{padding:13px 16px;border:1px solid rgba(255,255,255,.2);border-radius:9px;color:#edf4fb;overflow-wrap:anywhere}
+.contact-item span{display:block;color:#a9c5e0;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.contact-item a:hover{text-decoration:underline}
+footer{background:#0b1d33;color:#aebed0;text-align:center;padding:19px;font-size:.8rem}
+@media(max-width:800px){
+ nav{display:none;position:absolute;top:71px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:18px 22px;flex-direction:column;align-items:flex-start;gap:14px}
+ nav.open{display:flex}.menu-btn{display:block}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .experience{grid-template-columns:1fr;gap:8px}
+}
+@media(max-width:560px){
+ .container{width:min(100% - 28px,1120px)}
+ .hero{padding:72px 0 66px}
+ section{padding:58px 0}
+ .education-grid,.skills-grid,.cert-grid,.achievements{grid-template-columns:1fr}
+ .panel{padding:22px}
+ .experience{padding:21px}
+}
+@media print{
+ header,.actions,.menu-btn{display:none!important}
+ body{background:white}
+ .hero,.contact{background:#fff!important;color:#17263b!important}
+ .hero p,.eyebrow,.contact .section-intro,.contact-item{color:#17263b!important}
+ .hero{padding:35px 0}.contact{padding:30px 0}
+ section{padding:30px 0}
+ .panel,.experience,.edu,.skill-card,.cert,.achievement{box-shadow:none;break-inside:avoid}
+ a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">SURIYA <span>V.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">Menu</button>
+    <nav id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a>
+      <a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">Professional Portfolio</div>
+    <h1>Suriya V</h1>
+    <p>PGDM student with practical exposure to business development, lead generation and audit support. Interested in building customer relationships, identifying business opportunities and using analytical skills to support business decisions.</p>
+    <div class="hero-tags">
+      <span class="tag">PGDM</span><span class="tag">Business Development</span><span class="tag">Marketing & Lead Generation</span><span class="tag">Data Analytics</span>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="#experience">Explore My Experience</a>
+      <a class="btn btn-outline" href="#contact">Get in Touch</a>
+      <button class="btn btn-outline" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head"><div class="kicker">A little about me</div><h2>About Me</h2>
+      <p class="section-intro">A management student combining classroom learning with practical exposure across business development, marketing support and finance-related processes.</p></div>
+    <div class="about-grid">
+      <div class="panel"><p>I am currently pursuing a Post Graduate Diploma in Management at Firebird Institute of Research in Management. Through internships at Home First Finance Company India Limited, V3 Data Intelligence and EF Support Private Limited, I have gained exposure to customer engagement, lead generation, business development activities, financial records and audit documentation. I value teamwork, adaptability and continuous learning, and I look forward to contributing to a professional team while developing my management skills.</p></div>
+      <div class="panel fact-list">
+        <div class="fact"><small>Current qualification</small><strong>Post Graduate Diploma in Management</strong></div>
+        <div class="fact"><small>Institute</small><strong>Firebird Institute of Research in Management</strong></div>
+        <div class="fact"><small>Professional interests</small><strong>Marketing · Business Development · Lead Generation</strong></div>
+        <div class="fact"><small>Based in</small><strong>Tamil Nadu, India</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:#eef3f8">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Practical learning</div><h2>Internship & Experience</h2><p class="section-intro">Hands-on exposure gained through internships and an observational placement.</p></div>
+    <div class="timeline">
+      <article class="experience">
+        <div><div class="exp-date">JUNE – AUGUST 2026</div><div class="exp-type">Internship</div></div>
+        <div><h3>Home First Finance Company India Private Limited</h3><div class="role">Business Development Intern</div>
+          <ul><li>Supported business development by meeting DSAs and customers, assisting with DSA onboarding, customer verification, layout visits, NPA follow-ups and collection activities.</li><li>Generated customer leads through SRO visits and pamphlet distribution.</li><li>Participated in the CREDAI expo at CODISSIA and connected with prospective customers and DSAs.</li></ul>
+        </div>
+      </article>
+      <article class="experience">
+        <div><div class="exp-date">MARCH – MAY 2026</div><div class="exp-type">Internship</div></div>
+        <div><h3>V3 Data Intelligence</h3><div class="role">Lead Generation Intern</div>
+          <ul><li>Generated and managed leads through targeted email marketing campaigns while maintaining prospect details and follow-up records.</li><li>Engaged with potential clients to introduce services, understand their interest and support the sales team in lead conversion.</li></ul>
+        </div>
+      </article>
+      <article class="experience">
+        <div><div class="exp-date">SEPTEMBER 2025 – JANUARY 2026</div><div class="exp-type">Internship</div></div>
+        <div><h3>EF Support Private Limited</h3><div class="role">Audit Intern</div>
+          <ul><li>Analysed financial statements, verified vouchers and invoices, and prepared audit documentation.</li><li>Reconciled account balances and reviewed financial records to identify errors and support reporting accuracy.</li></ul>
+        </div>
+      </article>
+      <article class="experience">
+        <div><div class="exp-date">FEBRUARY – MARCH 2025</div><div class="exp-type">Practical exposure</div></div>
+        <div><h3>District Court, Trichy</h3><div class="role">Observational Exposure</div>
+          <ul><li>Observed court proceedings and reviewed legal documents to understand judicial operations, case handling and court procedures.</li><li>Studied case proceedings and documentation, developing an understanding of legal processes and courtroom practices.</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Academic background</div><h2>Education</h2></div>
+    <div class="education-grid">
+      <article class="edu"><div class="year">2025 – PRESENT</div><h3>Post Graduate Diploma in Management (PGDM)</h3><p>Firebird Institute of Research in Management</p><span class="score">CGPA: 8.0</span></article>
+      <article class="edu"><div class="year">2022 – 2025</div><h3>Bachelor of Arts – Public Administration</h3><p>Government Arts College, Trichy · Bharathidasan University</p><span class="score">70%</span></article>
+      <article class="edu"><div class="year">2018 – 2019</div><h3>Higher Secondary</h3><p>Sree Dharmasastha Matriculation Higher Secondary School · Tamil Nadu State Board</p><span class="score">72.16%</span></article>
+      <article class="edu"><div class="year">2016 – 2017</div><h3>Secondary School</h3><p>Sree Dharmasastha Matriculation Higher Secondary School · Tamil Nadu State Board</p><span class="score">92.6%</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:#eef3f8">
+  <div class="container">
+    <div class="section-head"><div class="kicker">What I bring</div><h2>Skills</h2></div>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>Technical Skills</h3><div class="pills"><span class="pill">MS Excel</span><span class="pill">MS Word</span><span class="pill">PowerPoint</span><span class="pill">Dashboard Creation</span></div></div>
+      <div class="skill-card"><h3>Professional Skills</h3><div class="pills"><span class="pill">Adaptability</span><span class="pill">Communication</span><span class="pill">Teamwork & Collaboration</span><span class="pill">Time Management</span><span class="pill">Problem Solving</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Continuous learning</div><h2>Certifications</h2><p class="section-intro">Courses and technical qualifications listed in my resume.</p></div>
+    <div class="cert-grid">
+      <div class="cert"><div class="cert-mark">✓</div><div><strong>Financial Modeling and Valuation with AI</strong><span>Internshala Trainings</span></div></div>
+      <div class="cert"><div class="cert-mark">✓</div><div><strong>Data Analytics</strong><span>NoviTech R&D Private Limited</span></div></div>
+      <div class="cert"><div class="cert-mark">✓</div><div><strong>Artificial Intelligence</strong><span>NoviTech R&D Private Limited</span></div></div>
+      <div class="cert"><div class="cert-mark">✓</div><div><strong>Machine Learning</strong><span>NoviTech R&D Private Limited</span></div></div>
+      <div class="cert"><div class="cert-mark">✓</div><div><strong>Computer on Office Automation</strong><span>Directorate of Technical Education</span></div></div>
+      <div class="cert"><div class="cert-mark">✓</div><div><strong>Typewriting – English & Tamil (Higher Grade)</strong><span>Directorate of Technical Education</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#eef3f8" id="achievements">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Beyond academics</div><h2>Achievements & Activities</h2></div>
+    <div class="achievements">
+      <article class="achievement"><h3>NSS Participation</h3><p>Actively participated in NSS during school and undergraduate studies, contributing to community service and social development initiatives.</p></article>
+      <article class="achievement"><h3>Drawing & Creativity</h3><p>Participated in drawing competitions and events, demonstrating creativity and artistic skills.</p></article>
+      <article class="achievement"><h3>Athletics</h3><p>Participated in athletic events, developing competitive spirit and time management skills.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div><div class="kicker" style="color:#a9c9e8">Let's connect</div><h2>Thank you for visiting.</h2><p class="section-intro">I welcome opportunities to learn, contribute and grow. Feel free to connect with me for professional discussions and opportunities.</p></div>
+    <div class="contact-links">
+      <div class="contact-item"><span>Email</span><a href="mailto:suriyav70@gmail.com">suriyav70@gmail.com</a></div>
+      <div class="contact-item"><span>Phone</span><a href="tel:+917094521066">+91 70945 21066</a></div>
+      <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/suriya-v-73779a264" target="_blank" rel="noopener">linkedin.com/in/suriya-v-73779a264</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© <span id="year"></span> Suriya V · Professional Portfolio</footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
